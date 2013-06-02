@@ -1,0 +1,17 @@
+{
+  "name": "DratBrowser",
+  "version": "0.0.1",
+  "dependencies": {
+    "coffee-script": "~1.4.0",
+    "connect-assets": "~2.3.3",
+    "express": "~3.0.6",
+    "jade": "~0.28.1",
+    "stylus": "~0.32.0"
+  },
+  "scripts": {
+    "start": "app.coffee"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .span12
+    h1 D.R.A.T. Browser
+
+    form.form-search.pull-right
+      .input-append
+        input#list-filter.span3.search-query(type="text", placeholder="Filter")
+        button.btn(disabled="disabled"): i.icon-search
+
+    table#resource-list.table.table-bordered
+      thead
+        tr
+          th Name
+          th Region
+          th Category
+          th Available To
+      tbody
