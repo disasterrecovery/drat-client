@@ -2,4 +2,4 @@
 
 The source CoffeeScript file is `src/app.coffee`
 
-See the live demo: http://jsbin.com/asitiz/11
+(Live demo)[http://jsbin.com/asitiz/12].

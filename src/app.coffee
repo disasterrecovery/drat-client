@@ -1,6 +1,6 @@
 class DratBrowser
   constructor: (options) ->
-    @host = 'http://drat-api.herokuapp.com'
+    @host = 'http://api.disasterrecovery.io'
     @url = "#{@host}/api/v1/resources.json?callback=?"
 
     @$list = $(options.list)

@@ -9,7 +9,7 @@
       this.display_resources = __bind(this.display_resources, this);
 
       var _this = this;
-      this.host = 'http://drat-api.herokuapp.com';
+      this.host = 'http://api.disasterrecovery.io';
       this.url = "" + this.host + "/api/v1/resources.json?callback=?";
       this.$list = $(options.list);
       this.$filter_field = $('#list-filter');
