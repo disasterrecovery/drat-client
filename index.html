@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DRAT Browser</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>D.R.A.T. Browser</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table id="resource-list" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>
+                  <div class="input-group" style="width:320px">
+                    <input id="list-filter" type="text" placeholder="Name" class="form-control">
+                    <span class="input-group-btn">
+                      <button disabled="disabled" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                  </div>
+                </th>
+                <th>Region</th>
+                <th width="30%">Category</th>
+                <th>Available To</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 class DratBrowser
   constructor: (options) ->
-    @host = 'http://drat-demo.herokuapp.com'
+    @host = 'http://drat-api.herokuapp.com'
     @url = "#{@host}/api/v1/resources.json?callback=?"
 
     @$list = $(options.list)
@@ -10,7 +10,7 @@ class DratBrowser
       e.preventDefault()
       @start_filter()
 
-    @get_resources_from_drat_api @display_resources
+    @get_resources_from_drat_api(@display_resources)
 
   start_filter: ->
     q = @search_value()
@@ -26,7 +26,8 @@ class DratBrowser
 
     for item in $items
       $item = $(item)
-      $item.hide() if $item.data('name').search(new RegExp(q, 'i')) == -1
+      if $item.data('name').search(new RegExp(q, 'i')) == -1
+        $item.hide()
 
     return $items
 
@@ -44,19 +45,21 @@ class DratBrowser
         cells.push(region)
 
         categories = ''
-        categories += "#{category}, " for category in resource.categories
+        for category in resource.categories
+          categories += "#{category}, "
         cells.push(categories)
 
         $available_to = $('<ul>')
-        $available_to.append($('<li>').text(entity)) for entity in resource.available_to
+        for entity in resource.available_to
+          $available_to.append($('<li>').text(entity))
         cells.push($available_to)
 
         $row = $('<tr>')
         $row.data('name', resource.name)
-        $row.append($('<td>').html(cell)) for cell in cells
+        for cell in cells
+          $row.append($('<td>').html(cell))
 
         @$list.append($row)
 
 $ ->
-  window.drat_browser = new DratBrowser list: $('#resource-list tbody')[0]
-
+  window.drat_browser = new DratBrowser(list: $('#resource-list tbody')[0])

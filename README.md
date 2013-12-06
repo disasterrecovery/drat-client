@@ -1,2 +1,5 @@
-A simple example client that reads from the DRAT API.
-See the live demo: http://jsbin.com/asitiz/2
+### A simple example client for the DRAT API.
+
+The source CoffeeScript file is `src/app.coffee`
+
+See the live demo: http://jsbin.com/asitiz/11
